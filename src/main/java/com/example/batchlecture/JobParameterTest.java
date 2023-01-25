@@ -23,7 +23,7 @@ public class JobParameterTest implements ApplicationRunner {
     public void run(ApplicationArguments args) throws Exception {
 
         JobParameters jobParameters = new JobParametersBuilder()
-                .addString("name", "user")
+                .addDate("date", new Date())
                 .toJobParameters();
 
         jobLauncher.run(job, jobParameters);
